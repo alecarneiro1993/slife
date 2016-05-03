@@ -22,10 +22,14 @@
          <span id="no-bio">Edit your profile to change this section!</span>
          <% end %>
       </div>
-      <div id="user-tertiary-container">
-        <div class="pos-btn">
-          <%= link_to "Edit your Profile", edit_user_registration_path, class: "btn btn-default profile-btn-edit" %>
+      <div id="user-tertiary-container" class="container">
+        <div class="pos-btn row">
+          <div class="col-md-6">
+            <%= link_to "Edit your Profile", edit_user_registration_path, class: "btn btn-default profile-btn-edit" %>
+          </div>
+          <div class="col-md-6">
           <%= link_to "Delete Account" , user_registration_path, class: "btn btn-default profile-btn-destroy",method: :delete, confirm: 'Are You Sure?' %>
+          </div>
         </div>
       </div>
   </div>

@@ -10,12 +10,16 @@ $profile-btn-destroy: #c12e2e;
 
 div.page-heading {
   color: $profile-text-color;
+  width: 110px;
+  margin-left: 15%;
+
 }
 
 div#profile-panel-size {
-  width: 100%;
+  width: 70%;
+  min-width: 50%;
   min-height: 500px;
-  margin: 3% auto;
+  margin: 1% auto;
   background-color: #e4e4e4;
 
   img#user-avatar {
@@ -39,15 +43,10 @@ div#profile-panel-size {
   }
 
   div#user-primary-container {
-    width: 50%;
+    width: 100%;
     margin: 10px auto 0 auto;
-    font-size: 20px;
-
-    span#user-email {
-      clear:right;
-      text-align: center;
-      display: block;
-    }
+    font-size: 1.2em;
+    text-align: center;
   }
 
   div#user-secondary-container {
@@ -60,22 +59,24 @@ div#profile-panel-size {
 
     span#no-bio {
       color: $no-bio-text-color;
-      font-size: 20px;
+      font-size: 1.4em;
       display: block;
       margin: 120px auto;
-      width: 50%;
+      width: 45%;
+      text-align: center;
     }
   }
 
   div#user-tertiary-container {
     border-top: 3px solid $section-color;
+    width: 100%;
 
     div.pos-btn {
       margin: 20px 0 0 0px;
 
       a.profile-btn-destroy {
         float: right;
-        width: 350px;
+        width: 100%;
         background-color: $profile-btn-color;
         border: none;
         color: $profile-btn-text;
@@ -89,12 +90,13 @@ div#profile-panel-size {
       }
 
       a.profile-btn-edit {
-        width: 350px;
+        width: 100%;
         background-color: $profile-btn-color;
         border: none;
         color: $profile-btn-text;
         font-size: 1.3em;
         transition: all 0.3s ease 0s;
+        margin-bottom: 5px;
         &:hover {
           background-color: $profile-btn-hover;
           color: $profile-btn-text;

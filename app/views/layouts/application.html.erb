@@ -1,72 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>HW-RUBY-APP</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<% if !user_signed_in? %>
-<body id="sign-bg">
-<% else %>
-<body>
-  <header id="header">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div id="header-mobile-height" class="navbar-header">
-        <button id="collapsed-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a id="logo" class="navbar-brand" href="#">Slife</a>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navigation-bar">
-        <ul class="nav navbar-nav">
-          <li class="<%= active_class(root_path) %>"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></li>
-          <li class="<%= active_class(user_show_path) %>"><%= link_to "Profile", user_show_path %></li>
-        </ul>
-        <span id="user-credentials">
-          Welcome,
-          <% if current_user.professor? %>
-          Professor <%= current_user.full_name %>!
-          <% else %>
-          <%= current_user.full_name %>!
-          <% end %>
-          <%= link_to(raw("<span class='glyphicon glyphicon-off'>"), destroy_user_session_path, :method => :delete, :id => "logout")  %>
-        </span>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</header>
-
-
-  <!-- <header id="header" class="container">
-        <span id="logo">Slife</span>
-        <nav class="navbar">
-            <ul class="nav navbar-nav navbar-left">
-              <li class="active"><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Profile", user_show_path %></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
-            </ul>
-        </nav>
-        <span id="user-credentials">
-          Welcome,
-          <% if current_user.professor? %>
-          Professor <%= current_user.full_name %>!
-          <% else %>
-          <%= current_user.full_name %>!
-          <% end %>
-          <%= link_to('X', destroy_user_session_path, :method => :delete, :id => "logout") %>
-        </span>
-  </header> -->
-<% end %>
-<main class="container">
-  <%= yield %>
-</main>
-</body>
+   <head>
+      <title>Slife</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+   </head>
+   <% if !user_signed_in? %>
+   <body id="sign-bg">
+      <% else %>
+      <body>
+         <header id="header">
+            <nav class="navbar navbar-default">
+               <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div id="header-mobile-height" class="navbar-header">
+                     <button id="collapsed-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <a id="logo" class="navbar-brand" href="#">Slife</a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="navigation-bar">
+                     <ul class="nav navbar-nav">
+                        <li class="<%= active_class(root_path) %>"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></li>
+                        <li class="<%= active_class(user_show_path) %>"><%= link_to "Profile", user_show_path %></li>
+                     </ul>
+                     <span id="user-credentials">
+                     Welcome,
+                     <% if current_user.professor? %>
+                     Professor <%= current_user.full_name %>!
+                     <% else %>
+                     <%= current_user.full_name %>!
+                     <% end %>
+                     <%= link_to(raw("<span class='glyphicon glyphicon-off'>"), destroy_user_session_path, :method => :delete, :id => "logout")  %>
+                     </span>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <% end %>
+         <main class="container">
+            <%= yield %>
+         </main>
+   </body>
 </html>

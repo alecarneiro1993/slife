@@ -1,112 +1,91 @@
 $header-bg: #5dacc6;
 $menu-text-color: #5dacc6;
 $logo-color: #fefefe;
-
 @font-face {
-  font-family: 'Mochary';
-  src:url('mochary.ttf');
-  src:url('mochary.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Mochary';
+    src: url('mochary.ttf');
+    src: url('mochary.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
-
 html {
-  height: 100%;
-  overflow-y: scroll;
+    height: 100%;
+    overflow-y: scroll;
 }
 body {
-  min-height: 100%;
-  font-family: Helvetica, Arial;
+    min-height: 100%;
+    font-family: Helvetica,Arial;
 }
-
 main {
-  min-height: 60%;
-  margin: 0 auto;
+    min-height: 60%;
+    margin: 0 auto;
 }
-
 header#header {
+    color: #FFF;
+    button#collapsed-button {
+        background-color: #FFF;
+        margin: 30px 20px 0 0;
+    }
+    #header-mobile-height {
+        height: 100px;
+    }
+    a#logo {
+        font-size: 60px;
+        color: $logo-color;
+        line-height: 70px;
+        margin-left: 35px;
+    }
+    nav.navbar {
+        background-color: $header-bg;
 
-  color: #FFF;
-
-  button#collapsed-button {
-    background-color: #FFF;
-    margin: 30px 20px 0 0;
-  }
-
-  #header-mobile-height {
-    height: 100px;
-  }
-
-  a#logo {
-    font-size: 60px;
-    color: $logo-color;
-    line-height: 70px;
-    margin-left: 35px;
-
-  }
-
-  nav.navbar {
-    background-color: $header-bg;
-
-  div#navigation-bar {
-    border: none;
-  }
-
-    ul {
-      margin-top: 0px;
-
-      .active a{
-          color: $menu-text-color;
-          background-color: #FFF;
-      }
-
-      li {
-        text-align: center;
-        a {
-          color: #FFF;
-          transition: 0.4s;
-          font-size: 20px;
-          text-decoration: none;
-          padding: 39.5px 25px;
-
-          &:hover {
-            color: $menu-text-color;
-            background-color: #fff;
-          }
+        div#navigation-bar {
+            border: none;
+            
         }
-      }
-
+        ul {
+            margin-top: 0px;
+            .active a {
+                color: $menu-text-color;
+                background-color: #FFF;
+            }
+            li {
+                text-align: center;
+                a {
+                    color: #FFF;
+                    transition: 0.4s;
+                    font-size: 20px;
+                    text-decoration: none;
+                    padding: 39.5px 25px;
+                    &:hover {
+                        color: $menu-text-color;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
     }
-  }
-
-  span#user-credentials {
-    margin: 40px 60px 40px 0;
-    vertical-align: middle;
-    float: right;
-    color: #fff;
-    font-size: 15px;
-
-    a#logout {
-      text-decoration: none;
-      color: #FFF;
-      font-size: 14px;
-      margin-left: 3px;
+    span#user-credentials {
+        margin: 40px 60px 40px 0;
+        vertical-align: middle;
+        float: right;
+        color: #fff;
+        font-size: 15px;
+        a#logout {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 14px;
+            margin-left: 3px;
+        }
     }
-  }
 }
-
-
-
 #logo, #logo-sign-in {
-  font-family: 'Mochary';
+    font-family: 'Mochary';
 }
-
 #no-border {
-  border: none;
+    border: none;
 }
-
 .input-field {
-  width: 80%;
-  padding: 3px;
-  margin-left: 5px;
+    width: 80%;
+    padding: 3px;
+    margin-left: 5px;
 }
