@@ -1,0 +1,26 @@
+<div id="wrapper">
+   <span id='logo-sign-in'>Slife</span>
+   <em id="slogan">Making College easier!</em>
+</div>
+<div id="sign-in-form">
+   <div id="no-border" class="panel panel-default">
+      <div id="sign-in-header" class="panel-heading text-center">Authentication</div>
+      <div id="form-position" class="panel-body">
+         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         <%= alert %>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-envelope icon-input-space size"></span>
+            <%= f.email_field :email, autofocus: true, class:"sign-input", :placeholder => "Your email address..."%>
+         </div>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-lock icon-input-space size"></span>
+            <%= f.password_field :password, autocomplete: "off", :placeholder => "Your password...", class:"sign-input" %>
+         </div>
+         <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-default", id: "sign-submit" %>
+            <%= link_to('Sign up', new_user_registration_path, {:id=>"sign-btn", :class=>"btn btn-default"}) %>
+         </div>
+         <% end %>
+      </div>
+   </div>
+</div>

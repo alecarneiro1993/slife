@@ -1,0 +1,141 @@
+$avatar-bg: #5dacc6;
+$file-hover: #13919d;
+$section-color: #5e5e5e;
+$profile-text-color: #5e5e5e;
+$no-bio-text-color: #868686;
+$profile-btn-color: #716e6e;
+$profile-btn-hover: #499bde;
+$profile-btn-text: #faf7f7;
+$profile-btn-destroy: #c12e2e;
+
+div.page-heading {
+  color: $profile-text-color;
+}
+
+div#profile-panel-size {
+  width: 100%;
+  min-height: 500px;
+  margin: 3% auto;
+  background-color: #e4e4e4;
+
+  img#user-avatar {
+    border-radius: 150px;
+    border-color: $avatar-bg;
+    background-color: $avatar-bg;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  div#user-name {
+    margin: 10px auto 0 auto;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  div#user-primary-container {
+    width: 50%;
+    margin: 10px auto 0 auto;
+    font-size: 20px;
+
+    span#user-email {
+      clear:right;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  div#user-secondary-container {
+
+    h2.user-label {
+      font-size: 30px;
+      border-bottom: 3px solid $section-color;
+      color: $profile-text-color;
+    }
+
+    span#no-bio {
+      color: $no-bio-text-color;
+      font-size: 20px;
+      display: block;
+      margin: 120px auto;
+      width: 50%;
+    }
+  }
+
+  div#user-tertiary-container {
+    border-top: 3px solid $section-color;
+
+    div.pos-btn {
+      margin: 20px 0 0 0px;
+
+      a.profile-btn-destroy {
+        float: right;
+        width: 350px;
+        background-color: $profile-btn-color;
+        border: none;
+        color: $profile-btn-text;
+        font-size: 1.3em;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background-color: $profile-btn-destroy;
+          color: $profile-btn-text;
+          text-decoration: none;
+        }
+      }
+
+      a.profile-btn-edit {
+        width: 350px;
+        background-color: $profile-btn-color;
+        border: none;
+        color: $profile-btn-text;
+        font-size: 1.3em;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background-color: $profile-btn-hover;
+          color: $profile-btn-text;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  div.file-input {
+    width: 20%;
+    margin: 15px auto 0 auto;
+    background-color: $avatar-bg;
+    height: 50px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: $file-hover;
+    }
+
+    .glyphicon-file {
+      font-size: 25px;
+      margin: 13.5px 0 0 8px;
+      color: #FFF;
+    }
+
+    input#user_avatar {
+      position: relative;
+      top: -46px;
+      width: 145px;
+      height: 50px;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    span#file-text {
+      color: #FFF;
+      font-size: 16px;
+      position: relative;
+      top: -3px;
+    }
+
+  }
+
+}

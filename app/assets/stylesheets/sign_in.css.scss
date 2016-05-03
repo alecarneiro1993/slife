@@ -1,0 +1,144 @@
+/* Styles for Log in and Sign up pages*/
+
+$panel-heading-color: #499bde;
+$first-btn-color-hovered: #499bde;
+$second-btn-color-hovered: #1d812d;
+$form-btn-unhovered: #716e6e;
+$form-font-color: #faf7f7;
+$sign-in-logo-color: #fefefe;
+$sign-in-slogan-color: #f5f1f1;
+
+
+
+body#sign-bg{
+    background: url('sign-in-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+div#wrapper {
+  margin: 0 auto;
+  width: 390px;
+  text-align: center;
+
+  span#logo-sign-in {
+    color: $sign-in-logo-color;
+    clear:right;
+    display: block;
+    height: 145px;
+    font-size: 120px;
+  }
+
+  em#slogan {
+    color: $sign-in-slogan-color;
+    font-size: 18px;
+    display: block;
+
+  }
+}
+
+#sign-in-form, #sign-up-form {
+  width: 390px;
+  min-height: 290px;
+  margin: 10px auto 0 auto;
+  padding: 0;
+}
+
+#sign-up-form .panel {
+  min-height: 350px;
+  overflow: hidden;
+}
+
+
+
+#sign-in-header, #sign-up-header {
+  font-size: 2em;
+  background-color: $panel-heading-color;
+  color: $form-font-color;
+}
+
+#form-position {
+  margin: 6px 0 0 10px;
+}
+
+.size {
+  font-size: 30px;
+}
+
+
+.icon-input-space {
+  margin-right: 15px;
+}
+
+.sign-input {
+  width: 80%;
+  padding: 3px;
+  position: relative;
+  top: -9px;
+}
+
+.input-position {
+  margin-left: 48px;
+  margin-top: 9px;
+}
+
+.input-margin-top {
+  margin-top: 10px;
+}
+
+#minimum-length {
+  margin-left: 50px;
+}
+
+#checkbox-style {
+  transform: scale(1.3);
+  margin-left: 7px;
+  margin-top: 0;
+}
+
+.label-margin {
+  margin-left: 10px;
+}
+
+#sign-submit {
+  margin-top: 10px;
+  width: 338px;
+  background-color: $form-btn-unhovered;
+  border: none;
+  color: $form-font-color;
+  font-size: 1.3em;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: $first-btn-color-hovered;
+    color: $form-font-color;
+  }
+}
+#sign-btn {
+  margin-top: 10px;
+  width: 338px;
+  background-color: $form-btn-unhovered;
+  border: none;
+  color: $form-font-color;
+  font-size: 1.3em;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: $second-btn-color-hovered;
+    color: $form-font-color;
+  }
+}
+
+#error-explanation {
+  width: 330px;
+  font-size: 12px;
+}
+
+#error-explanation h2 {
+  font-size: 15px;
+  margin: 0;
+}
+
+#error-explanation ul {
+  margin: 5px 0 0 0;
+}
+/* End of Log in and Sign up pages */

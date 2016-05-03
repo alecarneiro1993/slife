@@ -1,0 +1,43 @@
+<div id="wrapper">
+   <span id='logo-sign-in'>Slife</span><em id="slogan">Making College easier!</em>
+</div>
+<div id="sign-up-form" class="container">
+   <div id="no-border" class="panel panel-default">
+      <div id="sign-up-header" class="panel-heading text-center">Registration</div>
+      <div id="form-position" class="panel-body">
+         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+         <%= devise_error_messages! %>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-user icon-input-space size"></span>
+            <%= f.text_field :first_name, autofocus: true, class:"sign-input", :placeholder => "Your first name..."%>
+         </div>
+         <div class="field input-margin-top">
+            <%= f.text_field :last_name,class:"sign-input input-position", :placeholder => "Your last name..."%>
+         </div>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-envelope icon-input-space size"></span>
+            <%= f.email_field :email, class:"sign-input", :placeholder => "Your email address..."%>
+         </div>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-lock icon-input-space size"></span>
+            <%= f.password_field :password, autocomplete: "off", :placeholder => "Your password...", class:"sign-input" %>
+            <% if @minimum_password_length %>
+            <em id="minimum-length">(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+         </div>
+         <div class="field input-margin-top">
+            <span class="glyphicon glyphicon-ok icon-input-space size"></span>
+            <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Re-enter your password...", class:"sign-input" %>
+         </div>
+         <div class="field input-margin-top">
+            <%= f.check_box :professor %>
+            <%= f.label "Are you a Professor?", class: "label-professor" %>
+         </div>
+         <div class="actions">
+            <%= f.submit "Sign up", class: "btn btn-default", id: "sign-submit" %>
+            <%= link_to('Back to Log in page', new_user_session_path, {:id=>"sign-btn", :class=>"btn btn-default"}) %>
+         </div>
+         <% end %>
+      </div>
+   </div>
+</div>
